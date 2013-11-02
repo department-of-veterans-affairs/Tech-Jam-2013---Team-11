@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Veterans Affairs</title>
+<link rel="stylesheet" href="css/style.default.css" type="text/css" />
+<link rel="stylesheet" href="css/override.css" type="text/css" />
+
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+
+
+<script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/modernizr.min.js"></script>
+<script type="text/javascript" src="js/jquery.smartWizard.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+<link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./lib/themes/jquery.ui.all.css" />
+
+    <script type="text/javascript" src="./lib/raphael-min.js"></script>
+    <script type="text/javascript" src="./lib/es5-shim.min.js"></script>
+
+    <script type="text/javascript" src="./lib/state-machine.min.js"></script>
+    <script type="text/javascript" src="./lib/async.min.js"></script>
+
+    <script type="text/javascript" src="./lib/ui/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.mouse.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.draggable.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.accordion.min.js"></script>
+    <script type="text/javascript" src="./lib/ui/jquery.ui.slider.min.js"></script>
+
+    <script type="text/javascript" src="./lib/ui/jquery.ui.slider.min.js"></script>
+
+<script type="text/javascript" src="js/pathAPI.js"></script>
+<script type="text/javascript" src="js/vaConnector.js"></script>
+<script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+  <div id="content" role="main" class="container">
+
+    <div id="supported">
+      <section class="needs_support inactive">
+
+        <input id="ask_permission" type="button" value="Ask permission to display notifications">
+      </section>
+      <section class="needs_permission inactive">
+       
+        <div class="notification_forms clearfix">
+          <div id="plain_notification">
+
+            <form id="plain_form" action="#" method="post">
+              <fieldset id="notiVal">
+       
+                <input id="plain_icon" name="plain_icon" type="text" value="img/icon.png">
+         
+                <input id="plain_title" name="plain_title" type="text" value="Pushed">
+      
+                <textarea id="plain_message" name="plain_message">Pushed</textarea>
+                <input id="plain_submit" name="plain_submit" type="submit" value="Show notification" class="submit">
+
+              </fieldset>
+            </form>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+ <div id="draw_area">
+
+    <li id="tronli"><a href="#workoffline" role="button" data-toggle="modal"></a></li>
+
+ </div>
+
+<ul>
+
+</ul>
+<div id="workoffline" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+    <h3 id="myModalLabel">POI</h3>
+  </div>
+  <div class="modal-body">
+    <input type="text" name="poidescBox" id="poidescBoxI" />
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true" id="cancelpoidesc">Cancel</button>
+    <button class="btn btn-primary" data-dismiss="modal" id="savepoidesc">Save changes</button>
+  </div>
+</div>
+
+
+
+
+<div class="mainwrapper">
+    
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo3.png" alt="VA" />
+        </div>
+
+        <h1>Veterans Affairs - Health-2-Go</h1>
+
+
+    </div>
+    
+    <div class="leftpanel">
+        
+        <div class="leftmenu">        
+            <ul class="nav nav-tabs nav-stacked">
+            	<li class="nav-header">Types</li>
+                <li class="dropdown active" id="firstHead"><a href=""><span class="iconfa-inbox"></span>My Health Personal Information Report</a>
+<!--                     <ul  style="display: block" id="attachMaps">
+                    	<li class="active"><a><span class="icon-map-marker"></span>1</a></li>
+                        <li><a><span class="iconfa-map-marker"></span>2</a></li>
+                        <li><a><span class="iconfa-map-marker"></span>3</a></li>
+                        <li><a><span class="iconfa-map-marker"></span>4</a></li>
+                        <li><a><span class="iconfa-map-marker"></span>5</a></li>
+                        <li><a><span class="iconfa-map-marker"></span>6</a></li>
+                    </ul> -->
+                </li>
+                                </li>  
+
+                 <li class="dropdown" id="fourteenthHead"><a href=""><span class="iconfa-upload"></span>Medical Events</a>
+
+                </li>  
+                <li class="dropdown" id="secondHead"><a href=""><span class="iconfa-envelope"></span>Demographics</a>
+
+                </li>
+                <li class="dropdown" id="thirdHead"><a href=""><span class="iconfa-inbox"></span>Download Request Summary</a>
+
+                </li>
+                <li class="dropdown" id="fourthHead"><a href=""><span class="iconfa-laptop"></span>My Health Account Summary</a>
+
+                </li>
+                <li class="dropdown" id="fifthHead"><a href=""><span class="iconfa-briefcase"></span>Health Care Providers</a>
+
+                </li>
+                <li class="dropdown" id="sixthHead"><a href=""><span class="iconfa-inbox"></span>Treatment Facilities</a>
+
+                </li>
+                <li class="dropdown" id="seventhHead"><a href=""><span class="iconfa-map-marker"></span>Health Insurance</a>
+
+                </li>
+
+                 <li class="dropdown" id="eigthHead"><a href=""><span class="iconfa-inbox"></span>VA Wellness Reminders</a>
+
+                </li>
+
+                <li class="dropdown" id="ninthHead"><a href=""><span class="iconfa-briefcase"></span>VA Appointments</a>
+
+                </li>
+
+                <li class="dropdown" id="tenthHead"><a href=""><span class="iconfa-inbox"></span>VA Medication History</a>
+
+                </li>
+
+                <li class="dropdown" id="eleventhHead"><a href=""><span class="iconfa-envelope"></span>Medications and Supplements</a>
+
+                </li>
+
+                <li class="dropdown" id="twelthHead"><a href=""><span class="iconfa-inbox"></span>VA Allergies</a>
+
+                </li>
+
+                <li class="dropdown" id="thirteenthHead"><a href=""><span class="iconfa-briefcase"></span>Allergies Adverse Reactions</a>
+
+
+                
+
+                  <li class="dropdown" id="fifteenthHead"><a href=""><span class="iconfa-inbox"></span>Immunizations</a>
+
+                </li>  
+                
+                  <li class="dropdown" id="sixteenthHead"><a href=""><span class="iconfa-map-marker"></span>VA Lab Results</a>
+
+                </li>  
+                </li>  
+                
+                  <li class="dropdown" id="sixteenthHead"><a href=""><span class="iconfa-inbox"></span>Labs and Tests</a>
+
+                </li>  
+                                </li>  
+                
+                  <li class="dropdown" id="sixteenthHead"><a href=""><span class="iconfa-map-marker"></span>Vitals and Readings</a>
+
+                </li>  
+                                </li>  
+                
+                  <li class="dropdown" id="sixteenthHead"><a href=""><span class="iconfa-inbox"></span>Family Health History</a>
+
+                </li>  
+                                </li>  
+                
+                  <li class="dropdown" id="sixteenthHead"><a href=""><span class="iconfa-envelope"></span>Military Health History</a>
+
+                </li>  
+            </ul>
+            <button class="btn btn-inverse btn-large" id="addMap"><span class="iconfa-upload"></span>&nbsp;&nbsp;Upload VA Data</button>
+            <div id="mapUpload_Panel">
+            <form action="http://techjamnow.cloudapp.net/loadFile" enctype="multipart/form-data" method="post">
+				 <input type="file" name="filename" size="40" id="mapUploader">
+                 <input type="hidden" name="userKey" value="1">
+				 <button type="submit" id="submitStuff">Labs and Tests</button>
+			</form>
+			</div>
+        </div><!--leftmenu-->
+        
+    </div><!-- leftpanel -->
+    
+    <div class="rightpanel">
+        
+        <ul class="breadcrumbs">
+            <li><a href="dashboard.html"><i class="iconfa-home"></i></a> <span class="separator"></span></li>
+            <li id="homer"><a href="forms.html">Vitals and Tests</a></li>
+
+
+        </ul>
+        
+        <div class="pageheader">
+            <div class="pageicon"><span class="iconfa-map-marker"></span></div>
+            <div class="pagetitle">
+                <h5>My Health Personal Info Report</h5>
+                <h1>Details</h1>
+            </div>
+        </div><!--pageheader-->
+        
+        <div class="maincontent">
+            <div class="maincontentinner">
+            
+                <!-- START OF DEFAULT WIZARD -->
+
+                    <form class="stdform" method="post" action="link.html">
+                    <div id="wizard" class="wizard">
+                    	<br />
+                        <ul class="hormenu">
+                            <li>
+                            	<a href="#wiz1step1">
+                                	<span class="h2">1</span>
+                                    <span class="label">Category 1</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#wiz1step2">
+                                	<span class="h2">2</span>
+                                    <span class="label">Category 2</span>
+                                </a>
+                            </li>
+                            <li>
+                            	<a href="#wiz1step3">
+                                	<span class="h2">3</span>
+                                    <span class="label">Category 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                                                	
+                        <div id="wiz1step1" class="formwiz">
+                        	<h4 class="widgettitle">Category 1</h4>
+                        	
+
+                                
+                                <p>
+                                    <label>Name : </label>
+                                    <span class="field"><input type="text" name="nameBox" id="nameVal" class="input-xxlarge" /></span>
+                                </p>
+                                                                
+                         <p>
+                            <label>DOB : </label>
+                            <span class="field"><input type="text" name="dobBox" id="dobVal" class="input-mini" /></span>
+                        </p>
+                                
+                 	
+                            
+                        </div><!--#wiz1step1-->
+                        
+                        <div id="wiz1step2" class="formwiz">
+                        	<h4 class="widgettitle">Category 2</h4>
+                                
+                                               <p>
+                                    <label>Medical Event : </label>
+                                    <span class="field"><input type="text" name="medBox" id="e1Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Start Date : </label>
+                                    <span class="field"><input type="text" name="sbox" id="e2Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Stop Date : </label>
+                                    <span class="field"><input type="text" name="sBox" id="e3Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Response : </label>
+                                    <span class="field"><input type="text" name="rBox" id="e4Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Comments : </label>
+                                    <span class="field"><input type="text" name="cBox" id="e5Val" class="input-xxlarge" /></span>
+                                </p>
+                             
+                                                                                               
+                        </div><!--#wiz1step2-->
+                        
+                        <div id="wiz1step3">
+                        	<h4 class="widgettitle">Category 3</h4>
+                                               <p>
+                                    <label>Medical Event : </label>
+                                    <span class="field"><input type="text" name="m2Box" id="e21Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Start Date : </label>
+                                    <span class="field"><input type="text" name="s2Box" id="e22Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Stop Date : </label>
+                                    <span class="field"><input type="text" name="s23Box" id="e23Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Response : </label>
+                                    <span class="field"><input type="text" name="r3Box" id="e24Val" class="input-xxlarge" /></span>
+                                </p>
+
+                                                                <p>
+                                    <label>Comments : </label>
+                                    <span class="field"><input type="text" name="c3Box" id="e25Val" class="input-xxlarge" /></span>
+                                </p>
+                        
+
+                        </div><!--#wiz1step3-->
+                        
+                    </div><!--#wizard-->
+                    </form>
+                    <!-- END OF DEFAULT WIZARD -->
+                    
+                    <div class="clearfix"></div><br /><br />
+                    
+ 
+                    
+                    <div class="footer">
+                        <div class="footer-left">
+                            
+                        </div>
+                        <!--<div class="footer-right">
+                            <span>Designed by: pramodxyle</span>
+                        </div>-->
+                    </div><!--footer-->
+                
+            
+            </div><!--maincontentinner-->
+        </div><!--maincontent-->
+        
+    </div><!--rightpanel-->
+    
+</div><!--mainwrapper-->
+
+</body>
+</html>

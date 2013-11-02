@@ -1,0 +1,67 @@
+button#addMap{
+background-color: #4c66a4;
+color: #ffffff;
+font-family: 'RobotoLight', 'Helvetica Neue', Helvetica, sans-serif;
+width: 98%;
+}
+input[type="text"]{
+background: #ffffff;
+opacity: 0.6;
+color:#000000;
+}
+
+img#mapPath{
+	
+}
+div#mapPath{
+	
+
+	background-size: cover;
+	width: 513px;
+	height: 364px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#wiz1step2{
+	position: relative;
+}
+div#wiz1step3{
+	position: relative;
+}
+
+img#fs{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+input#poiDescI{
+	position: absolute;
+	bottom: 200px;
+	right: 100px;
+	right: 0;
+	cursor: default;
+}
+
+foreignObject#tron{
+	position: absolute;
+	bottom: 200px;
+	right: 100px;
+	right: 0;
+	cursor: default;	
+}
+
+img#fspoi{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+ul#attachMaps>li{
+	cursor: pointer;
+}

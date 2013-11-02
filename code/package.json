@@ -1,0 +1,8 @@
+{"name":"va",
+"version":"0.6.12",
+"dependencies":{
+	"express":"*",
+	"mongodb": "*",
+	"jade":"*"
+}
+}
